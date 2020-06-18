@@ -6,24 +6,62 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="lib/sweetalert.css">
     <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <title>Assista Filmes e Séries em Qualquer Lugar | Sky Play</title>
 </head>
 <body>
     <div class="nav-bar">
         <div class="nav-img">
-            <img src="image/favicon.png" alt="">
+            <a href="#">
+                <img src="image/logo.png" alt="Logo">
+            </a>
         </div>                                                                              
     </div>
-    <div class="nav-items">
-        <a href="#">Início</a>
-        <a href="#">Filmes</a>
-        <a href="#">Séries</a>
-        <a href="#">Canais</a>
+    <div class="container">
+        <div class="nav-items">
+            <ul>
+                <li>
+                    <a class="active" href="#">Início</a>
+                </li>
+                <li>
+                    <a href="#">Filmes</a>
+                </li>
+                <li>
+                    <a href="#">Séries</a>
+                </li>
+                <li>
+                    <a href="#">Canais</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="filmes"></div>
+        
     </div>
+    <div class="footer">
+        <div class="social">
+            <img src="image/logo-footer.png" alt="Sky">
+                <div class="rede-social">
+                    <a href="https://www.facebook.com/SKYBrasil/?ref=ts"><img src="image/icon-face.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/skybrasil"><img src="image/icon-twitter.png" alt="Twitter"></a>
+                    <a href="https://www.youtube.com/user/skyhdtv"><img src="image/icon-play.png" alt="Youtube"></a>
+                    <a href="https://www.instagram.com/skybrasil/"><img src="image/icon-insta.png" alt="Instagram"></a>
+                </div>
+        </div>
+        <div class="sky-informacoes">
+            <img src="image/logo-sky.png" alt="sky-informacoes">
+            <div class="app">Baixe no seu celular o app SKY 
+            <p>e divirta-se.</p></div>
+        </div>
+        
+    </div>
+    
 
     <script src="lib/jquery-1.9.1.min.js"></script>
     <script src="lib/sweetalert.min.js"></script>
     <script src="scripts/index.js"></script>
+
+
     
 </body>
 </html>

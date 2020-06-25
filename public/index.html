@@ -2,11 +2,13 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="lib/sweetalert.css">
     <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Assista Filmes e Séries em Qualquer Lugar | Sky Play</title>
 </head>
 <body>
@@ -35,7 +37,7 @@
             </ul>
         </div>
 
-        <div id="filmes"></div>
+        <div class="filmes"></div>
         
     </div>
     <div class="footer">
@@ -49,17 +51,55 @@
                 </div>
         </div>
         <div class="sky-informacoes">
-            <img src="image/logo-sky.png" alt="sky-informacoes">
-            <div class="app">Baixe no seu celular o app SKY 
-            <p>e divirta-se.</p></div>
+                <div class="app"><img src="image/logo-sky.png" alt="sky-informacoes">
+                    <a href="https://www.sky.com.br/app?_ga=2.266012940.2067278592.1592256315-1834179581.1592256315"></a><p>Baixe no seu celular o app SKY <span>e divirta-se.</span></p>
+                </div>
+            
+            <div class="sobre-sky">
+                <label>Sobre</label>
+                <p>Nossa História</p>
+                <p>Imprensa</p>
+                <p>Prêmios conquistados</p>
+                <p>Credenciamento</p>
+                <p>Trabalhe com a gente</p>
+                <p>Promoção</p>
+                <label>Ajuda</label>
+                <p>Central de ajuda</p>
+            </div>
+            <div class="respons-sky">
+                <label>Nossas responsabilidades</label>
+                <p>Conselho aos usuários</p>
+                <p>Pesquisa Anatel</p>
+                <p>Relatórios de transparência</p>
+                <p>Responsabilidade Social</p>
+                <p>Acessibilidade</p>
+                <label>Sky Empresas</label>
+            </div>
         </div>
-        
+        <div class="link-footer">
+            <a href="#index.html">Início <span>|</span></a>
+            <a href="https://www.sky.com.br/politica-de-privacidade?_ga=2.51987114.2067278592.1592256315-1834179581.1592256315">Política de Privacidade <span>|</span></a>
+            <a href="https://www.sky.com.br/contratos?_ga=2.99224861.2067278592.1592256315-1834179581.1592256315">Contratos Gerais<span>|</span></a>
+            <a href="https://www.sky.com.br/sky-pre-pago/documentos-juridicos?_ga=2.99224861.2067278592.1592256315-1834179581.1592256315">Contratos Pré-pago<span>|</span></a>
+            <a href="https://www.sky.com.br/minha-sky/login?returnUrl=%2Fminha-sky%2Fcancelar-assinatura%3F_ga%3D2.22096568.2067278592.1592256315-1834179581.1592256315">Cancelamento<span>|</span></a>
+            <a href="https://www.sky.com.br/ouvidoria?_ga=2.98296476.2067278592.1592256315-1834179581.1592256315">Ouvidoria<span>|</span></a>
+            <a href="https://www.sky.com.br/minha-sky/consumidor?_ga=2.98296476.2067278592.1592256315-1834179581.1592256315">Consumidor.gov</a>
+        </div>
+        <div class="direitos">
+            <p>® Todos os direitos reservados 2018. Todas as marcas SKY e qualquer propriedade intelectual inserida nelas são de propriedade da SKY Internacional AG e usadas pela SKY Serviços de Banda Larga LTDA.
+            <span>mediante licença.</span></p>
+        </div>
+
     </div>
     
 
     <script src="lib/jquery-1.9.1.min.js"></script>
     <script src="lib/sweetalert.min.js"></script>
     <script src="scripts/index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 
     

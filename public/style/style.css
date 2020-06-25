@@ -129,8 +129,11 @@ body{
 }
 
 .sky-informacoes{
+    grid-template-areas: 'app sobre-sky respons-sky';
+    grid-template-columns: 50% 30% 30%;
     display: flex;
     padding: 16.5px 0;
+    justify-content: space-around;
 }
 
 .sky-informacoes img{
@@ -138,13 +141,96 @@ body{
     height: 50px;
 }
 
-.sky-informacoes p{
-    margin-top: 0;
-}
-
 .app{
+    grid-area: app;
     font: 14px 'Nunito', sans-serif;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.6);
-    padding: 10px 0;
+    display: flex;
+}
+
+.app span{
+    display: flex;
+    flex-direction: column;
+}
+
+.app p{
+    cursor: pointer;
+}
+
+.sobre-sky{
+    grid-area: sobre-sky;
+    display: flex;
+    padding: 16.5px 0;
+    flex-direction: column;
+}
+
+label{
+    display: flex;
+    color: rgba(0, 0, 0, 0.6);
+    font: 15px 'Nunito', sans-serif;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+.sobre-sky p{
+    color: rgba(0, 0, 0, 0.87);
+    font: 14px 'Nunito', sans-serif;
+    line-height: 1px;
+}
+
+.sobre-sky p:hover,
+.respons-sky p:hover{
+    color: var(--color);
+    cursor: pointer;
+}
+
+.respons-sky{
+    margin-top: 5px;
+}
+
+.link-footer{
+    background-color: white;
+    height: 15px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.link-footer a{
+    text-decoration: none;
+    font: 14px 'Nunito', sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.link-footer a:hover{
+    color: var(--color);
+}
+
+.link-footer span{
+    margin: 0 5px;
+}
+
+.direitos{
+    height: 60px;
+    background-color: #F1F2FA;
+    font-size: 12.5px;
+    display: flex;
+    justify-content: center;
+}
+
+.direitos p, span{
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#carouselExampleControls{
+    width: 100%;
+    height: 200px;
+}
+
+.carousel-inner{
+    width: 500px;
+    height: 200px;
+    background-color: red;
 }

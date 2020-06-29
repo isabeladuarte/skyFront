@@ -5,6 +5,13 @@
     --color:#F35C58;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
 body, input, button{
     margin: 0;
     font: 14px 'Nunito', sans-serif;
@@ -26,6 +33,11 @@ body{
     background-color: white;
     border-top: var(--border-top);
     border-bottom: var(--border-bottom);
+    padding: 10px;
+}
+
+.nav-bar span{
+    display: none;
 }
 
 .nav-items{
@@ -67,7 +79,6 @@ body{
 }
 
 .nav-img{
-    padding: 10px 10px 10px 10px;
     margin-left: 5%;
 }
 
@@ -80,16 +91,6 @@ body{
     background-color: #E5E5E5;
 }
 
-.movies{
-    display: flex;
-}
-
-.movies .slide-show{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
 .slide-show img{
     width: 150px;
     border-radius: 5px;
@@ -98,29 +99,38 @@ body{
 .footer{
     background-color: #F1F2FA;
     width: 100%;
-    height: 400px;
     border-top: var(--border-top);
 }
 
 .footer img{
     width: 84px;
     height: 32px;
-    padding: 10px 50px;
 }
 
 .social{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     height: 50px;
     border-bottom: var(--border-bottom);
 }
 
+.media-social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .rede-social{
     display: flex;
+    justify-content: space-evenly;
 }
 
 .rede-social a{
     cursor: pointer;
+}
+
+.rede-social a + a{
+    margin-left: 10px;
 }
 
 .rede-social img{
@@ -129,11 +139,10 @@ body{
 }
 
 .sky-informacoes{
-    grid-template-areas: 'app sobre-sky respons-sky';
-    grid-template-columns: 50% 30% 30%;
-    display: flex;
-    padding: 16.5px 0;
-    justify-content: space-around;
+    grid-template-columns: 50% 1fr 1fr;
+    display: grid;
+    gap: 25px;
+    padding: 35px 0;
 }
 
 .sky-informacoes img{
@@ -142,11 +151,9 @@ body{
 }
 
 .app{
-    grid-area: app;
-    font: 14px 'Nunito', sans-serif;
+    display: flex;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.6);
-    display: flex;
 }
 
 .app span{
@@ -156,27 +163,28 @@ body{
 
 .app p{
     cursor: pointer;
+    margin-left: 10px;
 }
 
-.sobre-sky{
-    grid-area: sobre-sky;
+.sobre-sky label, 
+.respons-sky label{
     display: flex;
-    padding: 16.5px 0;
-    flex-direction: column;
-}
-
-label{
-    display: flex;
-    color: rgba(0, 0, 0, 0.6);
-    font: 15px 'Nunito', sans-serif;
+    color: rgba(0, 0, 0, 0.38);
     font-weight: bold;
     flex-direction: column;
+    margin-bottom: 25px;
 }
 
-.sobre-sky p{
+.sobre-sky p, 
+.respons-sky p{
     color: rgba(0, 0, 0, 0.87);
-    font: 14px 'Nunito', sans-serif;
-    line-height: 1px;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 8px 0;
+}
+
+.sobre-sky p + label, .respons-sky p + label{
+    margin-top: 20px;
 }
 
 .sobre-sky p:hover,
@@ -185,13 +193,9 @@ label{
     cursor: pointer;
 }
 
-.respons-sky{
-    margin-top: 5px;
-}
-
 .link-footer{
     background-color: white;
-    height: 15px;
+    width: 100%;
     padding: 20px 50px;
     display: flex;
     justify-content: flex-start;
@@ -212,11 +216,12 @@ label{
 }
 
 .direitos{
-    height: 60px;
     background-color: #F1F2FA;
     font-size: 12.5px;
+    padding: 20px 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .direitos p, span{
@@ -224,13 +229,78 @@ label{
     color: rgba(0, 0, 0, 0.6);
 }
 
-#carouselExampleControls{
-    width: 100%;
-    height: 200px;
+@media only screen and (max-width: 700px){
+    body{
+        font-size: 5px;
+    }
+
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-bar span{
+        display: block;
+    }
+
+    .nav-items a{
+        font-size: 10px;
+    }
+
+    .slide-show{
+        padding: 10px;
+    }
+
+    .slide-show img{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer{
+        width: 100%;
+    }
+
+    .social{
+        width: 100%;
+        display: flex;
+    }
+
+    .rede-social img{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .sky-informacoes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .app, .sobre-sky, .respons-sky{
+        margin-bottom: 20px;
+    }
+
+    .app p, .app span{
+        font-size: 12px;
+        color: var(--color);
+    }
+
+    .sobre-sky p, 
+    .respons-sky p{
+        font-size: 10px;
+        margin: 4px 0;
+    }
+
+    .sobre-sky label, 
+    .respons-sky label{
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
 }
 
-.carousel-inner{
-    width: 500px;
-    height: 200px;
-    background-color: red;
+@media only screen and (max-width: 600px){
+    .slide-show img{
+        width: 100%;
+        height: auto;
+    }
 }
